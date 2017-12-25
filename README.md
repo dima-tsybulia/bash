@@ -1,2 +1,2 @@
 # bash
-Scripts written on Bash
+Bash scripts.
