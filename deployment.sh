@@ -1,7 +1,7 @@
 #!/bin/bash
 # Written by Dmitry Tsybulia
 # For personal use only (Xubuntu 17.10)
-# v.0.3.26 - 01/06/2018
+# v.0.4.65 - 01/07/2018
 
 function is_root() {
 	if [[ $EUID -ne 0 ]]; then
@@ -39,3 +39,27 @@ done
 echo "blacklist btusb" >> /etc/modprobe.d/blacklist.conf
 
 apt upgrade
+
+echo "" > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+sed -i '1 i {                                                 \
+	"fallback_encoding": "Cyrillic (Windows 1251)",       \
+	"ignored_packages": [ "Vintage" ],                    \
+	"update_check": false                                 \
+}' ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+
+wget https://packagecontrol.io/Package%20Control.sublime-package -P ~/.config/sublime-text-3/Installed\ Packages
+
+wget https://github.com/dmitry-tsybulia/bash/raw/master/MarkdownEditing.sublime-package -P ~/.config/sublime-text-3/Installed\ Packages
+
+wget https://github.com/dmitry-tsybulia/bash/raw/master/License.sublime_license -P ~/.config/sublime-text-3/Local
+
+echo "" > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
+sed -i '1 i {                                                 \
+	"bootstrapped": true,                                 \
+	"in_process_packages": [],                            \
+	"installed_packages":                                 \
+	[                                                     \
+		"MarkdownEditing",                            \
+		"Package Control"                             \
+	]                                                     \
+}' ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
