@@ -1,7 +1,7 @@
 #!/bin/bash
 # Written by Dmitry Tsybulia
 # For personal use only (Xubuntu 17.10)
-# v.0.4.65 - 01/07/2018
+# v.0.4.67 - 01/21/2018
 
 function is_root() {
 	if [[ $EUID -ne 0 ]]; then
@@ -30,7 +30,7 @@ done
 
 apt update
 
-packages_for_installing=(chromium-browser screenfetch tree gparted markdown mc htop glances pinta default-jre xfce4-pulseaudio-plugin virtualbox-5.2 telegram sublime-text-installer)
+packages_for_installing=(chromium-browser screenfetch tree gparted markdown mc htop glances pinta default-jre xfce4-pulseaudio-plugin gufw virtualbox-5.2 telegram sublime-text-installer)
 
 for package in "${packages_for_installing[@]}"; do
 	apt install $package -y
