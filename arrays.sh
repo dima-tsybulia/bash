@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 # Written by Dmitry Tsybulia
 # For personal use only (Softheme Internship)
 # v.0.0.5 - 07/27/2017
