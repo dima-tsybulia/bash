@@ -1,4 +1,4 @@
-#!/bin/bash
+# !/bin/bash
 # Written by Dmitry Tsybulia
 # For personal use only
 # v.0.1.23 - 12/25/2017
