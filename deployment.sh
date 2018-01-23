@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # Written by Dmitry Tsybulia
 # For personal use only (Xubuntu 17.10)
 # v.0.4.67 - 01/21/2018
