@@ -1,7 +1,7 @@
 #!/bin/bash
 # Written by Dmitry Tsybulia
 # For personal use only
-# v.0.0.37 - 01/23/2018
+# v.0.0.41 - 01/24/2018
 
 argument=$1
 
@@ -29,9 +29,11 @@ function termigram_install() {
 
 function termigram_uninstall() {
 	termigram --clean
-	tput setaf 2
-   	echo "Termigram configuration file is removed!"
-   	tput sgr0
+	if [ $? -eq 0 ]; then
+		tput setaf 2
+	   	echo "Termigram configuration file is removed!"
+	   	tput sgr0
+	fi
 	sudo -H pip uninstall termigram -y
 	rm -f /usr/local/bin/termigram
 	sudo -H pip uninstall python-telegram-bot -y
