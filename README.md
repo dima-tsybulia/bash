@@ -1,2 +1,0 @@
-# bash
-Bash scripts.
